@@ -1,0 +1,177 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #f3f8fc;
+    color: #334155;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Clean NazrulIlham */
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0284c7;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #0f172a;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: #0284c7;
+}
+
+nav a.active {
+    background-color: #e0f2fe;
+    color: #0284c7;
+}
+
+/* Container Utama */
+main {
+    flex: 1;
+    max-width: 1100px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+/* Hero Badge */
+.badge-center {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0284c7;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 18px;
+    border-radius: 50px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------------------------
+   SISTEM LAYOUT KOLOM (RESPONSIF SAMA SEPERTI GAMBAR)
+--------------------------------------------------- */
+.grid-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* Layout Card */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(14, 116, 144, 0.05);
+    flex: 1;
+    min-width: 280px; /* Otomatis menyesuaikan jumlah kolom */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tampilan Foto */
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    background-color: #e0f2fe; /* Placeholder jika foto belum ada */
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #0284c7;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Ketiak Layar HP / Kurang dari 600px, berubah otomatis jadi 1-Column */
+@media screen and (max-width: 600px) {
+    .grid-layout {
+        flex-direction: column;
+    }
+}
+
+/* Tombol Kapsul */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px 22px;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #00a8e8;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0096d2;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
